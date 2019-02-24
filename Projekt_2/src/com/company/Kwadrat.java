@@ -17,8 +17,8 @@ public class Kwadrat extends Figura {
         try {
             if (a == 0) throw new IllegalArgumentException();
             return Math.pow(a, 2);
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (Exception e) {   //przechwytuje błąd lokalnie
+            System.out.println("blad przechwyczony z kwadratu");
             return 0;
         }
 

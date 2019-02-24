@@ -24,7 +24,8 @@ public class Prostokat extends Figura {
         return a * b;
     }
 
-    public double obwod(int a, int b) {
+    public double obwod(int a, int b) throws IllegalArgumentException{ //wyrzucenie błędu tam gdzie jest wywolywana metoda
+        if (a + b == 0) throw new IllegalArgumentException("buuu");
         return 2 *(a + b);
     }
 }
