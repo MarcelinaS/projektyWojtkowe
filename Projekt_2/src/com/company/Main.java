@@ -3,7 +3,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -24,16 +23,18 @@ public class Main {
 
         for (Figura x : listaProbna2  //widzi na x metody klasy abstrakcyjnej
         ) {
-            System.out.println(x.pole(2,3));
+            System.out.println(x.pole(0,3));
         }
-
 
         System.out.println("Pole kwadratunia z listy: "+ listaProbna.get(1));
         System.out.println("Obwod kwadratunia z listy: "+ listaProbna.get(2));
         System.out.println("Pole prostokacika z listy: "+ listaProbna.get(4));
         System.out.println("Obwod prostokacika z listy: "+ listaProbna.get(5));
 
-        //   System.out.println("pole kwadratunia : " + kwadratunio.pole(5,0));
-        //   System.out.println("pole prostokacika : " + prostokacik.pole(3,5));
+        Figura kwadratunio2 = new Kwadrat();
+        ((Kwadrat) kwadratunio2).setA(12);  //rzutowanie na metodę klasy Kwadrat (inaczej bierze z Figury)
+
+        KlasaTestowa klasaTestowa = new KlasaTestowa();
+        klasaTestowa.generycznyWyswietlacz(kwadratunio2,10,11);
     }
 }
